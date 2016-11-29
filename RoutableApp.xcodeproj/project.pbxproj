@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1F0CF99E1DEE0669009108D0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0CF99D1DEE0669009108D0 /* Alamofire.framework */; };
+		1F0CF9A01DEE0892009108D0 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF99F1DEE0892009108D0 /* Router.swift */; };
+		1F0CF9A21DEE0A19009108D0 /* RoutesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF9A11DEE0A19009108D0 /* RoutesProtocol.swift */; };
 		1FB0432F1DEE026600B8E169 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB0432E1DEE026600B8E169 /* AppDelegate.swift */; };
 		1FB043311DEE026600B8E169 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB043301DEE026600B8E169 /* ViewController.swift */; };
 		1FB043341DEE026600B8E169 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FB043321DEE026600B8E169 /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		1F0CF99D1DEE0669009108D0 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
+		1F0CF99F1DEE0892009108D0 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		1F0CF9A11DEE0A19009108D0 /* RoutesProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoutesProtocol.swift; path = ../RoutesProtocol.swift; sourceTree = "<group>"; };
 		1FB0432B1DEE026600B8E169 /* RoutableApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoutableApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FB0432E1DEE026600B8E169 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FB043301DEE026600B8E169 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,8 +65,9 @@
 		1FB0432D1DEE026600B8E169 /* RoutableApp */ = {
 			isa = PBXGroup;
 			children = (
-				1F0CF99D1DEE0669009108D0 /* Alamofire.framework */,
+				1F0CF9A11DEE0A19009108D0 /* RoutesProtocol.swift */,
 				1FB043301DEE026600B8E169 /* ViewController.swift */,
+				1F0CF99F1DEE0892009108D0 /* Router.swift */,
 				1FB043441DEE02AE00B8E169 /* Supporting Files */,
 			);
 			path = RoutableApp;
@@ -71,6 +76,7 @@
 		1FB043441DEE02AE00B8E169 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1F0CF99D1DEE0669009108D0 /* Alamofire.framework */,
 				1FB0432E1DEE026600B8E169 /* AppDelegate.swift */,
 				1FB043401DEE027300B8E169 /* Cartfile */,
 				1FB043411DEE027300B8E169 /* Cartfile.resolved */,
@@ -177,7 +183,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FB043311DEE026600B8E169 /* ViewController.swift in Sources */,
+				1F0CF9A01DEE0892009108D0 /* Router.swift in Sources */,
 				1FB0432F1DEE026600B8E169 /* AppDelegate.swift in Sources */,
+				1F0CF9A21DEE0A19009108D0 /* RoutesProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
