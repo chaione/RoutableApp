@@ -14,6 +14,8 @@
 		1FB043391DEE026600B8E169 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FB043371DEE026600B8E169 /* LaunchScreen.storyboard */; };
 		1FDA5EB21E3D1E7A00C35569 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDA5EB01E3D1E1C00C35569 /* Alamofire.framework */; };
 		1FDA5EB31E3D1E7A00C35569 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDA5EB01E3D1E1C00C35569 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1FDA5EB61E3D1FF600C35569 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDA5EB51E3D1FF600C35569 /* Router.swift */; };
+		1FDA5EB81E3D20FD00C35569 /* RoutesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDA5EB71E3D20FD00C35569 /* RoutesProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +41,8 @@
 		1FB043381DEE026600B8E169 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FB0433A1DEE026600B8E169 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FDA5EB01E3D1E1C00C35569 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
+		1FDA5EB51E3D1FF600C35569 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		1FDA5EB71E3D20FD00C35569 /* RoutesProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutesProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 		1FB0432D1DEE026600B8E169 /* RoutableApp */ = {
 			isa = PBXGroup;
 			children = (
+				1FDA5EB51E3D1FF600C35569 /* Router.swift */,
+				1FDA5EB71E3D20FD00C35569 /* RoutesProtocol.swift */,
 				1FB043301DEE026600B8E169 /* ViewController.swift */,
 				1FB043441DEE02AE00B8E169 /* Supporting Files */,
 			);
@@ -166,7 +172,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FB043311DEE026600B8E169 /* ViewController.swift in Sources */,
+				1FDA5EB61E3D1FF600C35569 /* Router.swift in Sources */,
 				1FB0432F1DEE026600B8E169 /* AppDelegate.swift in Sources */,
+				1FDA5EB81E3D20FD00C35569 /* RoutesProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
