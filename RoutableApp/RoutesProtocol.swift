@@ -18,6 +18,7 @@ protocol URLRouter {
 protocol Routable {
     typealias Parameters = [String : Any]
     var route: String {get set}
+    var urlParams: String! {get set}
     init()
 }
 
@@ -38,6 +39,40 @@ extension Routable {
     /// Create instance of Object that conforms to Routable
     init() {
         self.init()
+    }
+
+    /// Create instance of Object that conforms to Routable
+    ///
+    /// - Parameter _arg: pass in any arguments for object's route
+    init(_ _arg: String = "") {
+        self.init()
+        urlParams = _arg
+    }
+
+    /// Allows a route to become a nested route
+    ///
+    /// - Parameters:
+    ///   - args: Any arguments that need to be passed into the full route: Example: `/users/<username>/statuses/2`
+    ///   - child: The child route which will be of type `RequestConverter`
+    /// - Returns: Returns a `RequestConverter` object with all the information
+    func nestedRoute(args: String, child: RequestConverterProtocol) -> RequestConverter {
+
+        return RequestConverter(
+            method: child.method,
+            route: "\(self.route)/\(args)/\(child.route)",
+            parameters: child.parameters
+        )
+    }
+
+    /// Generate the URL for generated routes
+    ///
+    /// - Parameters:
+    ///   - parent: Parent of the nested object. Example: users/initfabian/posts/2, `User` is the parent
+    ///   - child: Child of the nested object. Example: users/initfabian/posts/2, `Post` is the child
+    /// - Returns: String of the nested url
+    func nestedRouteURL(parent: Routable, child: Routable) -> String {
+        let nestedRoute = "\(parent.route)/\(parent.urlParams!)/" + child.route
+        return nestedRoute
     }
 }
 

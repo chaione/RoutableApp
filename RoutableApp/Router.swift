@@ -16,9 +16,18 @@ struct Router: URLRouter {
 
     struct User: Readable, Creatable, Deletable, Updatable {
         var route: String = "users"
+        var urlParams: String!
     }
 
     struct Status: Readable, Creatable, Deletable {
         var route: String = "statuses"
+        var urlParams: String!
+    }
+}
+
+extension Router.User {
+
+    func getStatus(params: String) -> RequestConverterProtocol {
+        return nestedRoute(args: urlParams, child: Router.Status.get(params: params))
     }
 }
