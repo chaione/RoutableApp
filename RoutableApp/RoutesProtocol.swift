@@ -104,7 +104,7 @@ extension Creatable where Self: Routable {
     static func create(parameters: Parameters) -> RequestConverter {
         let temp = Self.init()
         let route = "\(temp.route)"
-        return RequestConverter(method: .post, route: route)
+        return RequestConverter(method: .post, route: route, parameters: parameters)
     }
 }
 
